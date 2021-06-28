@@ -1,0 +1,68 @@
+= Cómo empezar con la librería Everou en iOS
+
+`Tabla de contenido`
+
+* <<compilar, Compilar app Everou Sample>>
+* <<configuracion, Configuración>>
+* <<inicializacion, Inicialización>>
+* <<obtener, Obtener dispostivos>>
+* <<accionar, Accionar dispositivo>>
+
+{zwsp} +
+[[compilar]]
+== Compilar app Everou Sample
+
+Para compilar la aplicación de ejemplo de Everou SDK es necesario especificar una api key válida en el fichero *_TableViewController.m_*
+----
+NSString* const kEverouUserPrivateAPIKey = @"REPLACE_API_KEY"; // Reemplazar por una api key válida para un usuario de Everou
+----
+
+{zwsp} +
+
+[[configuracion]]
+== Configuración
+
+Para añadir la librería Everou a un proyecto de Android necesitas el fichero *_EverouSDK.xcframework_*
+
+* Añade el fichero *_EverouSDK.xcframework_* en el directorio *<project_dir>/Frameworks*
+* El proyecto reconocera el fichero automáticamente:
+
+{zwsp} +
+
+[[inicializacion]]
+== Inicialización
+
+Después de autentificar al usuario de la app con su sistema y haber obtenido una *_api_key_* de Everou, la app debe inicializar *_EverouSDK_* con dicha api_key:
+
+----
+    [EverouSDK initializeWithAPIKey:kEverouUserPrivateAPIKey
+                            sharedGroup:kAppSharedGroupIdentifier
+                             completion:^(EverouUser *user, NSError *error) {
+        ...
+    }];
+----
+{zwsp} +
+
+[[obtener]]
+== Obtener dispositivos
+
+Para obtener los dispositivos de un usuario se debe llamar a la función *_getDevices:_*:
+
+----
+    [EverouSDK getDevices:^(NSArray<EverouDevice*> *devices, NSError *error) {
+        ...
+    }];
+----
+{zwsp} +
+
+[[accionar]]
+== Accionar dispositivo
+
+Puedes accionar cualquiera de los dispositivos del usuario con la función *_toggleDevice:completion:_*.
+Para poder accionar un dispositivo se necesita que esté activado el Bluetooth del teléfono, con los permisos aceptados de bluetooth y que se encuentre en el rango de conexión con el dispositivo.
+----
+    [EverouSDK toggleDevice:device completion:^(NSError *error) {
+        ...
+    }];
+----
+{zwsp} +

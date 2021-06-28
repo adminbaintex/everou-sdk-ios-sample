@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E224C38267225900014E428 /* README.adoc in Resources */ = {isa = PBXBuildFile; fileRef = 4E224C37267225900014E428 /* README.adoc */; };
+		4E224C39267228530014E428 /* EverouSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; };
+		4E224C3A267228530014E428 /* EverouSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E951A3226675F380014A208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A3126675F380014A208 /* AppDelegate.m */; };
+		4E951A3526675F380014A208 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A3426675F380014A208 /* SceneDelegate.m */; };
+		4E951A3B26675F380014A208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E951A3926675F380014A208 /* Main.storyboard */; };
+		4E951A3D26675F3A0014A208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E951A3C26675F3A0014A208 /* Assets.xcassets */; };
+		4E951A4026675F3A0014A208 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E951A3E26675F3A0014A208 /* LaunchScreen.storyboard */; };
+		4E951A4326675F3A0014A208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A4226675F3A0014A208 /* main.m */; };
+		4E951A4D26675F3B0014A208 /* EverouSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A4C26675F3B0014A208 /* EverouSampleTests.m */; };
+		4E951A5826675F3B0014A208 /* EverouSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A5726675F3B0014A208 /* EverouSampleUITests.m */; };
+		4E951A6C26677AB80014A208 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A6B26677AB80014A208 /* TableViewController.m */; };
+		4E951A73266787D80014A208 /* EverouDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A72266787D80014A208 /* EverouDeviceCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E951A4926675F3B0014A208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E951A2526675F380014A208 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E951A2C26675F380014A208;
+			remoteInfo = EverouSample;
+		};
+		4E951A5426675F3B0014A208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E951A2526675F380014A208 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E951A2C26675F380014A208;
+			remoteInfo = EverouSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E951A79266793900014A208 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4E224C3A267228530014E428 /* EverouSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4E224C3526721E9F0014E428 /* EverouSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = EverouSDK.xcframework; sourceTree = "<group>"; };
+		4E224C37267225900014E428 /* README.adoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.adoc; sourceTree = "<group>"; };
+		4E951A2D26675F380014A208 /* EverouSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverouSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E951A3026675F380014A208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4E951A3126675F380014A208 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4E951A3326675F380014A208 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		4E951A3426675F380014A208 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		4E951A3A26675F380014A208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E951A3C26675F3A0014A208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E951A3F26675F3A0014A208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E951A4126675F3A0014A208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E951A4226675F3A0014A208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E951A4826675F3B0014A208 /* EverouSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverouSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E951A4C26675F3B0014A208 /* EverouSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverouSampleTests.m; sourceTree = "<group>"; };
+		4E951A4E26675F3B0014A208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E951A5326675F3B0014A208 /* EverouSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverouSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E951A5726675F3B0014A208 /* EverouSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverouSampleUITests.m; sourceTree = "<group>"; };
+		4E951A5926675F3B0014A208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E951A6A26677AB80014A208 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		4E951A6B26677AB80014A208 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		4E951A71266787D80014A208 /* EverouDeviceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EverouDeviceCell.h; sourceTree = "<group>"; };
+		4E951A72266787D80014A208 /* EverouDeviceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverouDeviceCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E951A2A26675F380014A208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E224C39267228530014E428 /* EverouSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A4526675F3B0014A208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A5026675F3B0014A208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E224C3426721E9F0014E428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E224C3526721E9F0014E428 /* EverouSDK.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E951A2426675F380014A208 = {
+			isa = PBXGroup;
+			children = (
+				4E224C37267225900014E428 /* README.adoc */,
+				4E951A2F26675F380014A208 /* EverouSample */,
+				4E951A4B26675F3B0014A208 /* EverouSampleTests */,
+				4E951A5626675F3B0014A208 /* EverouSampleUITests */,
+				4E224C3426721E9F0014E428 /* Frameworks */,
+				4E951A2E26675F380014A208 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E951A2E26675F380014A208 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E951A2D26675F380014A208 /* EverouSample.app */,
+				4E951A4826675F3B0014A208 /* EverouSampleTests.xctest */,
+				4E951A5326675F3B0014A208 /* EverouSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E951A2F26675F380014A208 /* EverouSample */ = {
+			isa = PBXGroup;
+			children = (
+				4E951A74266792AD0014A208 /* Supporting Files */,
+				4E951A3026675F380014A208 /* AppDelegate.h */,
+				4E951A3126675F380014A208 /* AppDelegate.m */,
+				4E951A3326675F380014A208 /* SceneDelegate.h */,
+				4E951A3426675F380014A208 /* SceneDelegate.m */,
+				4E951A6A26677AB80014A208 /* TableViewController.h */,
+				4E951A6B26677AB80014A208 /* TableViewController.m */,
+				4E951A71266787D80014A208 /* EverouDeviceCell.h */,
+				4E951A72266787D80014A208 /* EverouDeviceCell.m */,
+				4E951A3E26675F3A0014A208 /* LaunchScreen.storyboard */,
+				4E951A3926675F380014A208 /* Main.storyboard */,
+			);
+			path = EverouSample;
+			sourceTree = "<group>";
+		};
+		4E951A4B26675F3B0014A208 /* EverouSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E951A4C26675F3B0014A208 /* EverouSampleTests.m */,
+				4E951A4E26675F3B0014A208 /* Info.plist */,
+			);
+			path = EverouSampleTests;
+			sourceTree = "<group>";
+		};
+		4E951A5626675F3B0014A208 /* EverouSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E951A5726675F3B0014A208 /* EverouSampleUITests.m */,
+				4E951A5926675F3B0014A208 /* Info.plist */,
+			);
+			path = EverouSampleUITests;
+			sourceTree = "<group>";
+		};
+		4E951A74266792AD0014A208 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E951A3C26675F3A0014A208 /* Assets.xcassets */,
+				4E951A4126675F3A0014A208 /* Info.plist */,
+				4E951A4226675F3A0014A208 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E951A2C26675F380014A208 /* EverouSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E951A5C26675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSample" */;
+			buildPhases = (
+				4E951A2926675F380014A208 /* Sources */,
+				4E951A2A26675F380014A208 /* Frameworks */,
+				4E951A2B26675F380014A208 /* Resources */,
+				4E951A79266793900014A208 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EverouSample;
+			productName = EverouSample;
+			productReference = 4E951A2D26675F380014A208 /* EverouSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E951A4726675F3B0014A208 /* EverouSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E951A5F26675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSampleTests" */;
+			buildPhases = (
+				4E951A4426675F3B0014A208 /* Sources */,
+				4E951A4526675F3B0014A208 /* Frameworks */,
+				4E951A4626675F3B0014A208 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E951A4A26675F3B0014A208 /* PBXTargetDependency */,
+			);
+			name = EverouSampleTests;
+			productName = EverouSampleTests;
+			productReference = 4E951A4826675F3B0014A208 /* EverouSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4E951A5226675F3B0014A208 /* EverouSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E951A6226675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSampleUITests" */;
+			buildPhases = (
+				4E951A4F26675F3B0014A208 /* Sources */,
+				4E951A5026675F3B0014A208 /* Frameworks */,
+				4E951A5126675F3B0014A208 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E951A5526675F3B0014A208 /* PBXTargetDependency */,
+			);
+			name = EverouSampleUITests;
+			productName = EverouSampleUITests;
+			productReference = 4E951A5326675F3B0014A208 /* EverouSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E951A2526675F380014A208 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4E951A2C26675F380014A208 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					4E951A4726675F3B0014A208 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4E951A2C26675F380014A208;
+					};
+					4E951A5226675F3B0014A208 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 4E951A2C26675F380014A208;
+					};
+				};
+			};
+			buildConfigurationList = 4E951A2826675F380014A208 /* Build configuration list for PBXProject "EverouSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E951A2426675F380014A208;
+			productRefGroup = 4E951A2E26675F380014A208 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E951A2C26675F380014A208 /* EverouSample */,
+				4E951A4726675F3B0014A208 /* EverouSampleTests */,
+				4E951A5226675F3B0014A208 /* EverouSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E951A2B26675F380014A208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E951A4026675F3A0014A208 /* LaunchScreen.storyboard in Resources */,
+				4E951A3D26675F3A0014A208 /* Assets.xcassets in Resources */,
+				4E224C38267225900014E428 /* README.adoc in Resources */,
+				4E951A3B26675F380014A208 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A4626675F3B0014A208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A5126675F3B0014A208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E951A2926675F380014A208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E951A3226675F380014A208 /* AppDelegate.m in Sources */,
+				4E951A4326675F3A0014A208 /* main.m in Sources */,
+				4E951A73266787D80014A208 /* EverouDeviceCell.m in Sources */,
+				4E951A3526675F380014A208 /* SceneDelegate.m in Sources */,
+				4E951A6C26677AB80014A208 /* TableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A4426675F3B0014A208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E951A4D26675F3B0014A208 /* EverouSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E951A4F26675F3B0014A208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E951A5826675F3B0014A208 /* EverouSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E951A4A26675F3B0014A208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E951A2C26675F380014A208 /* EverouSample */;
+			targetProxy = 4E951A4926675F3B0014A208 /* PBXContainerItemProxy */;
+		};
+		4E951A5526675F3B0014A208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E951A2C26675F380014A208 /* EverouSample */;
+			targetProxy = 4E951A5426675F3B0014A208 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E951A3926675F380014A208 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E951A3A26675F380014A208 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4E951A3E26675F3A0014A208 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E951A3F26675F3A0014A208 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E951A5A26675F3B0014A208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4E951A5B26675F3B0014A208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E951A5D26675F3B0014A208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = EverouSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E951A5E26675F3B0014A208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				INFOPLIST_FILE = EverouSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4E951A6026675F3B0014A208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				INFOPLIST_FILE = EverouSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EverouSample.app/EverouSample";
+			};
+			name = Debug;
+		};
+		4E951A6126675F3B0014A208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				INFOPLIST_FILE = EverouSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EverouSample.app/EverouSample";
+			};
+			name = Release;
+		};
+		4E951A6326675F3B0014A208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				INFOPLIST_FILE = EverouSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EverouSample;
+			};
+			name = Debug;
+		};
+		4E951A6426675F3B0014A208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28RPK6N85J;
+				INFOPLIST_FILE = EverouSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EverouSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E951A2826675F380014A208 /* Build configuration list for PBXProject "EverouSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E951A5A26675F3B0014A208 /* Debug */,
+				4E951A5B26675F3B0014A208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E951A5C26675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E951A5D26675F3B0014A208 /* Debug */,
+				4E951A5E26675F3B0014A208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E951A5F26675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E951A6026675F3B0014A208 /* Debug */,
+				4E951A6126675F3B0014A208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E951A6226675F3B0014A208 /* Build configuration list for PBXNativeTarget "EverouSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E951A6326675F3B0014A208 /* Debug */,
+				4E951A6426675F3B0014A208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E951A2526675F380014A208 /* Project object */;
+}
