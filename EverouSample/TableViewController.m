@@ -10,6 +10,7 @@
 // Frameworks
 @import EverouSDK;
 @import CoreBluetooth;
+@import CoreLocation;
 
 // Views
 #import "EverouDeviceCell.h"
@@ -17,10 +18,16 @@
 NSString* const kEverouUserPrivateAPIKey = @"testing-everou-user-apikey";
 NSString* const kAppSharedGroupIdentifier = nil;
 
-@interface TableViewController () <CBCentralManagerDelegate>
-@property (nonatomic, strong) EverouUser *loggedUser;
-@property (nonatomic, strong) NSArray<EverouDevice*> *devices;
-@property (nonatomic, strong) CBCentralManager *centralManager;
+@interface TableViewController ()
+<CBCentralManagerDelegate, CLLocationManagerDelegate, AutomaticDetectionDelegate>
+
+@property (nonatomic) EverouUser *loggedUser;
+@property (nonatomic) NSArray<EverouDevice*> *devices;
+
+@property (nonatomic) CBCentralManager *centralManager;
+@property (nonatomic) CLLocationManager *locationManager;
+@property (nonatomic) id<AutomaticDetectionDelegate> delegate;
+
 @end
 
 @implementation TableViewController
@@ -48,7 +55,8 @@ NSString* const kAppSharedGroupIdentifier = nil;
 {
     [EverouSDK initializeWithAPIKey:kEverouUserPrivateAPIKey
                         sharedGroup:kAppSharedGroupIdentifier
-                         completion:^(EverouUser *user, NSError *error) {
+                         completion:^(EverouUser *user, NSError *error)
+     {
         if (!error)
         {
             self.loggedUser = user;
@@ -60,8 +68,8 @@ NSString* const kAppSharedGroupIdentifier = nil;
 
 - (void)loadDevices
 {
-    [EverouSDK getDevices:^(NSArray<EverouDevice*> *devices, NSError *error) {
-        
+    [EverouSDK getDevices:^(NSArray<EverouDevice*> *devices, NSError *error)
+     {
         if (!error) {
             self.devices = devices;
         }
@@ -69,10 +77,38 @@ NSString* const kAppSharedGroupIdentifier = nil;
             NSLog(@"Error fetching devices %@", error);
         }
         
-        //End refresh control
         [self.refreshControl endRefreshing];
-        
         [self.tableView reloadData];
+        
+        [self startAutomaticDetection];
+    }];
+}
+
+- (void)startAutomaticDetection
+{
+    [EverouSDK startAutomaticDeviceDetection:self
+                                  completion:^(NSError* _Nullable error)
+     {
+        if (error)
+        {
+            NSLog(@"Error starting automatic detection: %@", error);
+            
+            switch (error.code) {
+                // APIErrorCodeBLEPermissions = 6001,
+                case 6001:
+                    [self askBluetoothPermissions];
+                    break;
+                // APIErrorCodeLocatingPermissions = 6002,
+                case 6002:
+                    [self askLocationPermissions];
+                    break;
+                default:
+                    break;
+            }
+        }
+        else {
+            NSLog(@"Started automatic detection!");
+        }
     }];
 }
 
@@ -83,16 +119,18 @@ NSString* const kAppSharedGroupIdentifier = nil;
     UIButton *button = (UIButton*)sender;
     EverouDevice *device = self.devices[button.tag];
     
-    [EverouSDK toggleDevice:device completion:^(NSError *error) {
-        
+    [EverouSDK toggleDevice:device completion:^(NSError *error)
+     {
         if (!error)
         {
             NSLog(@"Toggled device %@", device.name);
         }
-        else {
+        else
+        {
             NSLog(@"Error toggling device %@", error);
             
-            if (error.code == 5114)
+            // APIErrorCodeBLEPermissions = 6001,
+            if (error.code == 6001)
             {
                 [self askBluetoothPermissions];
             }
@@ -102,9 +140,23 @@ NSString* const kAppSharedGroupIdentifier = nil;
 
 - (void)askBluetoothPermissions
 {
+    NSLog(@"Requesting BLE permissions");
+    
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self
                                                                queue:dispatch_get_main_queue()
                                                              options:@{CBCentralManagerOptionShowPowerAlertKey:@(NO)}];
+}
+
+- (void)askLocationPermissions
+{
+    NSLog(@"Requesting location permissions");
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.activityType = CLActivityTypeOther;
+    self.locationManager.delegate = self;
+    self.locationManager.allowsBackgroundLocationUpdates = NO;
+    
+    [self.locationManager requestAlwaysAuthorization];
 }
 
 #pragma mark - Table view data source
@@ -137,25 +189,32 @@ NSString* const kAppSharedGroupIdentifier = nil;
     return cell;
 }
 
+#pragma mark - Automatic Detection delegate
+
+- (void)didDetectDevice:(NSString*)deviceUid error:(NSError* _Nullable)error
+{
+    NSLog(@"Detected device %@ error: %@", deviceUid, error);
+}
+
+- (void)didToggleDevice:(NSString*)deviceUid
+{
+    NSLog(@"Toggled device %@", deviceUid);
+}
+
 #pragma mark - CBCentral Manager
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
     switch (central.state) {
         case CBManagerStateUnauthorized:
-        {
             switch (CBManager.authorization) {
                 case CBManagerAuthorizationAllowedAlways:
-                {
                     NSLog(@"BLE authorized");
                     break;
-                }
                 default:
                     break;
             }
-            
             break;
-        }
         default:
             break;
     }

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4E224C38267225900014E428 /* README.adoc in Resources */ = {isa = PBXBuildFile; fileRef = 4E224C37267225900014E428 /* README.adoc */; };
-		4E224C39267228530014E428 /* EverouSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; };
-		4E224C3A267228530014E428 /* EverouSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4E951A3226675F380014A208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A3126675F380014A208 /* AppDelegate.m */; };
 		4E951A3526675F380014A208 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A3426675F380014A208 /* SceneDelegate.m */; };
 		4E951A3B26675F380014A208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E951A3926675F380014A208 /* Main.storyboard */; };
@@ -20,6 +18,8 @@
 		4E951A5826675F3B0014A208 /* EverouSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A5726675F3B0014A208 /* EverouSampleUITests.m */; };
 		4E951A6C26677AB80014A208 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A6B26677AB80014A208 /* TableViewController.m */; };
 		4E951A73266787D80014A208 /* EverouDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E951A72266787D80014A208 /* EverouDeviceCell.m */; };
+		4EC681A9270ED2B80074E488 /* EverouSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; };
+		4EC681AA270ED2B80074E488 /* EverouSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E224C3526721E9F0014E428 /* EverouSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4E951A79266793900014A208 /* Embed Frameworks */ = {
+		4EC681AB270ED2B80074E488 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E224C3A267228530014E428 /* EverouSDK.xcframework in Embed Frameworks */,
+				4EC681AA270ED2B80074E488 /* EverouSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E224C39267228530014E428 /* EverouSDK.xcframework in Frameworks */,
+				4EC681A9270ED2B80074E488 /* EverouSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 				4E951A2926675F380014A208 /* Sources */,
 				4E951A2A26675F380014A208 /* Frameworks */,
 				4E951A2B26675F380014A208 /* Resources */,
-				4E951A79266793900014A208 /* Embed Frameworks */,
+				4EC681AB270ED2B80074E488 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -494,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,10 +509,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28RPK6N85J;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = EverouSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baintex.EverouSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

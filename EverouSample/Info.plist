@@ -20,6 +20,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>We need Bluetooth to discover, connect and share information with our devices</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>We need Bluetooth to discover, connect and share information with our devices</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>dfgdfghbnv</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>xcvbxcvbxcvb</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>cxvbxcvbcvb</string>
+	<key>NSLocationUsageDescription</key>
+	<string>cxvbxcvbcvb</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>ForLocationCoordinates</key>
+		<string>xcvbxcvbxcvb</string>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -41,6 +58,12 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -55,10 +78,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>We need Bluetooth to discover, connect and share information with our devices</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>We need Bluetooth to discover, connect and share information with our devices</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
